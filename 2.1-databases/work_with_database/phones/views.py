@@ -9,8 +9,18 @@ def index(request):
 
 
 def show_catalog(request):
-
     template = 'catalog.html'
+
+    # template = 'catalog.html'
+    # filter = request.GET.get("sort")
+    # if filter == "name":
+    #     catalog_objects = Phone.objects.order_by("name")
+    # elif filter == "min_price":
+    #     catalog_objects = Phone.objects.order_by("price")
+    # if filter == "max_price":
+    #     catalog_objects = Phone.objects.order_by("price", reversed) # check 'reversed' mb need 'reverse()'
+    # else:
+    #     catalog_objects = Phone.objects.all()
 
     catalog_objects = Phone.objects.all()
 
