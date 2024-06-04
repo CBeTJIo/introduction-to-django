@@ -1,5 +1,8 @@
 from django.urls import path
+from measurement.views import SensorView, SensorUpdate, MeasurementsCreate
 
 urlpatterns = [
-    # TODO: зарегистрируйте необходимые маршруты
+    path('sensors/', SensorView.as_view()),
+    path('sensors/<pk>/', SensorUpdate.as_view()),
+    path('measurements/', MeasurementsCreate.as_view()),
 ]
