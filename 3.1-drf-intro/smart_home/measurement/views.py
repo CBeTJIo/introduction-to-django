@@ -30,6 +30,6 @@ class SensorUpdate(RetrieveUpdateAPIView):
     #     return Response('Изменения внесены')
 
 
-class MeasurementsCreate(ListCreateAPIView):
+class MeasurementCreate(ListCreateAPIView):
     queryset = Measurement.objects.all()
     serializer_class = MeasurementSerializer
