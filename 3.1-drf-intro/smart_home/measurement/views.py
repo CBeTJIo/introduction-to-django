@@ -7,17 +7,22 @@ class SensorView(ListCreateAPIView):
     queryset = Sensor.objects.all()
     serializer_class = SensorSerializer
 
+
+class SensorUpdate(RetrieveUpdateAPIView):
+    queryset = Sensor.objects.all()
+    serializer_class = SensorDetailSerializer
+
+
+class MeasurementCreate(ListCreateAPIView):
+    queryset = Measurement.objects.all()
+    serializer_class = MeasurementSerializer
+
     # def post(self, request, *args, **kwargs):
     #     new_sensor = Sensor.objects.create(
     #         name=request.data['name'],
     #         description=request.data['description']
     #     )
     #     return self.create(request, new_sensor)
-
-
-class SensorUpdate(RetrieveUpdateAPIView):
-    queryset = Sensor.objects.all()
-    serializer_class = SensorDetailSerializer
 
     # def patch(self, request, *args, **kwargs):
     #     pk = kwargs.get('pk', None)
@@ -28,8 +33,3 @@ class SensorUpdate(RetrieveUpdateAPIView):
     #     serializer.is_valid(raise_exception=True)
     #     serializer.save()
     #     return Response('Изменения внесены')
-
-
-class MeasurementCreate(ListCreateAPIView):
-    queryset = Measurement.objects.all()
-    serializer_class = MeasurementSerializer

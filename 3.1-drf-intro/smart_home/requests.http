@@ -34,7 +34,7 @@ Content-Type: application/json
 
 {
   "sensor": 1,
-  "temperature": 22.5
+  "temperature": 22.3
 }
 
 ###
